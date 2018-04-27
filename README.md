@@ -1,31 +1,24 @@
 # Data-Cleaning-Class-3
 
-Data Sets:
+Overview
+This script will allow you to open and tidy the datafile of the Samsung Data Set for the Getting and Cleaning Data Coursera course
 
-This script address the data sample founds at : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-A full description of the data can be found at : http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-Script:
-The script does the following:
+Assignment description
 Merges the training and the test sets to create one data set.
 Extracts only the measurements on the mean and standard deviation for each measurement.
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-** it should be noted that the script uses the plyr function
+NOTES and REQUIREMENTS
+User needs to be able to access the internet to download the data files
+Plyr package is used and must be installed first :  install.packages("plyr") 
 
-Data Naming:
-All the column names are described in features_info.txt data source zip file, except for the following:
+Open RStudio or R, download the script and run it from the software once you have installed Plyr package. This script runs the download itself. Make sure you are connected to the Internet. In case you need more description about the steps - see comments inside the script.
 
-activity: the string representing an activity of the subject
-LAYING
-SITTING
-STANDING
-WALKING
-WALKING_UPSTAIRS
-WALKING_DOWNSTAIRS
-subject_id: the number of the subject
+Reading the result
+run_analysis.R creates 1 file:
 
-
-Result: The end result is a file named : tidy_dataset.txt that is found in your working directory
+tidy_dataset.txt: a tab-delimited file containing tidy data set with the mean of each variable for each activity and each subject
+To access the result type following in R: read.table("tidy_dataset.txt", header=TRUE)
